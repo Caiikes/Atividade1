@@ -11,7 +11,25 @@
 
     <?php
 
-
+    function Qual_o_Mes($Numero) {
+    $Meses = array(
+        1 => "Janeiro",
+        2 => "Fevereiro",
+        3 => "Março",
+        4 => "Abril",
+        5 => "Maio",
+        6 => "Junho",
+        7 => "Julho",
+        8 => "Agosto",
+        9 => "Setembro",
+        10 => "Outubro",
+        12 => "Novembro",
+        12 => "Dezembro",
+    );
+    if ($Numero >= 1 and $Numero <= 12) {
+    echo "$Meses[$Numero]";
+    }
+    } 
     ?>
 
 </head>
@@ -19,10 +37,11 @@
 
 <body align="center">
 
-    <div class="Questoes">Questão 4</div>
+    <div class="Questoes">Questão 6</div>
 
     <?php
-
+    $Numero = 5;
+    Qual_o_Mes($Numero);
     ?>
 
 </body>
