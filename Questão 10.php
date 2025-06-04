@@ -11,7 +11,22 @@
 
     <?php
 
+    function Verificar($Numeros)
+    {
+        $Total = null;
+        $Numeros_Negativos = null;
 
+        foreach ($Numeros as $Numero) {
+            if ($Numero > 0) {
+                $Total = $Total + $Numero;
+            } else {
+                $Numeros_Negativos = $Numeros_Negativos + 1;
+            }
+        }
+
+        echo "<div class = 'Verde'>Soma dos números positivos = $Total</div>";
+        echo "<div class = 'Vermelho'>Total de números negativos = $Numeros_Negativos</div>";
+    }
     ?>
 
 </head>
@@ -22,6 +37,20 @@
     <div class="Questoes">Questão 10</div>
 
     <?php
+    $Numeros = array(
+        -13,
+        511,
+        35,
+        123,
+        -4534,
+        2432,
+        -12,
+        66,
+        -89,
+        345
+    );
+
+    Verificar($Numeros);
 
     ?>
 
